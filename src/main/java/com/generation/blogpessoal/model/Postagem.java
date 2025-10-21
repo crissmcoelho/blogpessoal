@@ -6,8 +6,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -42,6 +40,10 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 		
 	public Tema getTema() {
 		return tema;
@@ -82,5 +84,13 @@ public class Postagem {
 	public void setData(LocalDateTime data) {
 		this.data = data;
 	}
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 	
 }
