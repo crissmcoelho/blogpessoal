@@ -1,1 +1,4 @@
+com\generation\blogpessoal\util\JwtHelper.class
+com\generation\blogpessoal\util\TestBuilder.class
 com\generation\blogpessoal\BlogpessoalApplicationTests.class
+com\generation\blogpessoal\controller\UsuarioControllerTest.class
