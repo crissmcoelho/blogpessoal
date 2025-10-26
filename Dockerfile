@@ -9,7 +9,13 @@ COPY src src
 
 RUN chmod -R 777 ./mvnw
 
+RUN mvn dependency:go-offline
+
 RUN ./mvnw install -DskipTests
+
+
+RUN apt-get update && apt-get install -y maven
+
 
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
